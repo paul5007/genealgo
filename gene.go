@@ -11,8 +11,8 @@ type Chromosome interface {
 
 // ChromosomeModel holds metadata for a particular chromosome
 type ChromosomeModel struct {
-	Chromo   Chromosome
-	FitScore float64 // individual fitscore
+	Chromosome Chromosome
+	FitScore   float64 // individual fitscore
 }
 
 // ChromosomeFactory is a method that generates a new Chromosome
@@ -23,6 +23,6 @@ type Population interface{}
 
 // PopulationModel holds metadata for a particular population
 type PopulationModel struct {
-	Size     int
-	FitScore float64 // total fitscore
+	Chromosomes []Chromosome
+	FitScore    float64 // total fitscore
 }
